@@ -1,11 +1,25 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: rgba(64, 129, 241, 0.137);
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+.card{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  background-color: transparent;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -28,11 +42,3 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

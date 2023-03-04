@@ -13,13 +13,11 @@
   pointer-events: none;
 }
 
-.card{
+.card {
   display: flex;
-  flex-direction: column;
   row-gap: 10px;
   background-color: transparent;
 }
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -41,4 +39,3 @@
 .App-link {
   color: #61dafb;
 }
-

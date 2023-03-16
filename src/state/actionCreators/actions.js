@@ -1,14 +1,8 @@
-export const depositAmount = (amount) => {
+export const fetchProducts = async () => {
+  const response = await fetch("https://fakestoreapi.com/products");
+  const data = await response.json();
+  console.log(data);
   return (dispatch) => {
-    dispatch({ type: "deposit", payload: amount });
-  };
-};
-
-export const withDrawAmount = (amount) => {
-  return (dispatch) => {
-    dispatch({
-      type: "withdraw",
-      payload: amount,
-    });
+    dispatch({ type: "fetchProducts", payload: data });
   };
 };

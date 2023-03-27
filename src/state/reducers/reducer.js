@@ -5,8 +5,8 @@ export default function Reducer(state = inital, action) {
   switch (type) {
     case "fetchProducts":
       return payload;
-    case "REMOVE":
-      return state.filter((product) => product.name !== payload.name);
+    case "deleteProduct":
+      return state.filter((items) => items.id !== payload);
     default:
       return state;
   }

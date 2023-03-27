@@ -4,7 +4,7 @@ export default function Reducer(state = inital, action) {
   const { type, payload } = action;
   switch (type) {
     case "fetchProducts":
-      return [...state, payload];
+      return payload;
     case "REMOVE":
       return state.filter((product) => product.name !== payload.name);
     default:

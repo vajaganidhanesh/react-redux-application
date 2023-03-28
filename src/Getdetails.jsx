@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts, deleteProduct } from "./state/actionCreators/actions";
+import Header from "./Header";
 function Getdetails() {
   const products = useSelector((state) => state.Reducer);
   const dispatch = useDispatch();
@@ -11,9 +12,7 @@ function Getdetails() {
 
   return (
     <>
-      <div className='container-fluid bg-secondary text-white fw-bold d-flex justify-content-center fs-1 position-fixed z-index:1'>
-        <div className=''>{products.length}</div>
-      </div>
+      <Header />
       <div className='container-fluid d-flex flex-wrap justify-content-between align-items-center'>
         {products.map((val, index) => {
           return (

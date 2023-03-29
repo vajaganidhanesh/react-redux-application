@@ -2,9 +2,11 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts, deleteProduct } from "./state/actionCreators/actions";
 import Header from "./Header";
+
 function Getdetails() {
   const products = useSelector((state) => state.Reducer);
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fetchProducts());
     // eslint-disable-next-line
